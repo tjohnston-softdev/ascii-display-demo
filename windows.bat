@@ -19,7 +19,7 @@ IF EXIST %fileName% (GOTO :readSize) ELSE (GOTO :placeholder)
 :placeholder
 REM - Creates input file.
 echo ASCII art goes here > %fileName%
-GOTO :readSize
+GOTO :beginIteration
 REM - Close :placeholder
 
 

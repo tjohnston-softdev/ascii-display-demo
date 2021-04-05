@@ -1,11 +1,12 @@
 # Summary
 
-**Commit Number:** 6
+**Commit Number:** 7
 
-**Date:** 2021-04-05
+**Date:** 2021-04-06
 
-**Title:** Credits
+**Title:** Windows Batch - Redundant Validation
 
 **Description:**
 
-Added credits to readme.
+When creating a placeholder input file, size validation
+will be skipped.
