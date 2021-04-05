@@ -17,6 +17,15 @@ As a quick experiment, I decided to recreate that old script using the programmi
 
 ---
 
+## Credits
+
+* [@tjohnston-softdev](https://github.com/tjohnston-softdev) 
+	* Script design.
+	* Windows Batch file implementation.
+* Sample ASCII art from [ASCII Art Archive](https://www.asciiart.eu/computers/bug)
+
+---
+
 ## Disclaimer
 This project is licensed as [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). You may use the contents for both personal and commercial purposes as long as credit is given, and any derived works are shared under the same license. This also includes any implementations of the design in different languages.
 

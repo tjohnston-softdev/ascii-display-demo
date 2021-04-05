@@ -1,11 +1,11 @@
 # Summary
 
-**Commit Number:** 5
+**Commit Number:** 6
 
 **Date:** 2021-04-05
 
-**Title:** Readme
+**Title:** Credits
 
 **Description:**
 
-Wrote Readme file.
+Added credits to readme.

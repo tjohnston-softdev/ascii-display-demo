@@ -1,3 +1,3 @@
 # Changelog
 
-Wrote Readme file.
+Added credits to readme.
