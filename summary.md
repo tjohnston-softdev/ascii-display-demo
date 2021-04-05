@@ -1,11 +1,11 @@
 # Summary
 
-**Commit Number:** 2
+**Commit Number:** 3
 
 **Date:** 2021-04-05
 
-**Title:** Pseudocode Flowchart
+**Title:** ASCII Art
 
 **Description:**
 
-Created flowchart for script design.
+Created ASCII art input file.
