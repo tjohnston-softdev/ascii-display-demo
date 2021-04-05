@@ -1,11 +1,11 @@
 # Summary
 
-**Commit Number:** 3
+**Commit Number:** 4
 
 **Date:** 2021-04-05
 
-**Title:** ASCII Art
+**Title:** Windows Batch Script
 
 **Description:**
 
-Created ASCII art input file.
+Wrote ASCII display using Windows Batch scripting.
