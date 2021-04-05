@@ -1,9 +1,11 @@
 # Summary
 
-**Commit Number:** 1
+**Commit Number:** 2
 
 **Date:** 2021-04-05
 
-**Title:** Initial Commit
+**Title:** Pseudocode Flowchart
 
 **Description:**
+
+Created flowchart for script design.
