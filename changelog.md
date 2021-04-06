@@ -1,17 +1,13 @@
 # Changelog
 
-**./readme.md**
-* Added Node JS execution instruction.
-* Added following to credits:
-	* Node JS implementation
-	* Pseudocode Flowchart sources.
-	* ANSI colour codes
-	* Node JS text colouring tutorial
-* Removed "By..."
-* Removed "Introduction" heading.
-
----
-
-**./pseudocode/readme.md**
-* Merged source credits into index page (../readme.md)
-	* Replaced with links to individual files.
+**Pseudocode Flowchart**
+* Added "Wait one second" action.
+	* After "Display ASCII art"
+	* Before loop reset.
+* "Read file contents"
+	* Removed connection from "Create placeholder"
+	* Moved to take place directly after "Validate size"
+	* Redid connection to "ASCII art ready"
+* "Create placeholder"
+	* Now connects directly to  "ASCII art ready"
+* Changed "Randomly choose text colour" to "Choose random colour"
