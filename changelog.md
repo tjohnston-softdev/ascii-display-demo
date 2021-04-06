@@ -1,3 +1,4 @@
 # Changelog
 
-Wrote ASCII display demo using Node JS.
+**windows.bat**
+* Added header comment.

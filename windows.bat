@@ -1,3 +1,6 @@
+REM - ASCII Display Demo - Windows Batch.
+
+
 REM - Initialize script.
 @echo off
 title ASCII Display Demo
