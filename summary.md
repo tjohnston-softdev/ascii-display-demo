@@ -1,12 +1,11 @@
 # Summary
 
-**Commit Number:** 7
+**Commit Number:** 8
 
 **Date:** 2021-04-06
 
-**Title:** Windows Batch - Redundant Validation
+**Title:** Node JS Script
 
 **Description:**
 
-When creating a placeholder input file, size validation
-will be skipped.
+Wrote ASCII display using Node JS.
