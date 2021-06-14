@@ -1,1 +1,0 @@
-// Displays ASCII art to console.
