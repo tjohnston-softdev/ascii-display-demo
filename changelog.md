@@ -1,3 +1,5 @@
 # Changelog
 
-Deleted 'summary.md'
+**./src-nodejs/text-colours.js**
+* Merged into main file.
+* File header remains for now.

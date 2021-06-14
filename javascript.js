@@ -4,6 +4,7 @@ const inpFile = require("./src-nodejs/inp-file");
 const textColours = require("./src-nodejs/text-colours");
 const consoleOutput = require("./src-nodejs/console-output");
 const inputFileName = "ascii.txt";
+const supportedColours = [90, 91, 92, 93, 94, 95, 96, 97];
 runAsciiDisplay();
 
 
@@ -55,8 +56,50 @@ function callDisplayLoop(retInp)
 	// Run every second.
 	setInterval(function()
 	{
-		textColours.chooseNext(colourValues);
+		chooseNextColour(colourValues);
 		consoleOutput.displayArt(retInp, colourValues.current);
-		textColours.setPrevious(colourValues);
+		setPreviousColour(colourValues);
 	}, 1000);
+}
+
+
+
+// Choose next colour at random.
+function chooseNextColour(colObj)
+{
+	var currentRandomIndex = -1;
+	var currentValue = -1;
+	var choiceMade = false;
+	
+	// Loop until a different colour has been chosen.
+	while (choiceMade !== true)
+	{
+		currentRandomIndex = getRandomIndex();
+		currentValue = supportedColours[currentRandomIndex];
+		
+		if (currentValue !== colObj.previous)
+		{
+			// Complete.
+			colObj.current = currentValue;
+			choiceMade = true;
+		}
+	}
+}
+
+
+// Save previous colour so it cannot be chosen next.
+function setPreviousColour(colObj)
+{
+	var currentLocal = colObj.current;
+	colObj.previous = currentLocal;
+}
+
+
+
+// Get random colour index.
+function getRandomIndex()
+{
+	var seedValue = Math.random() * supportedColours.length;
+	var randRes = Math.floor(seedValue);
+	return randRes;
 }
