@@ -1,8 +1,6 @@
 // ASCII Display Demo - Node JS
 
 const inpFile = require("./src-nodejs/inp-file");
-const textColours = require("./src-nodejs/text-colours");
-const consoleOutput = require("./src-nodejs/console-output");
 const inputFileName = "ascii.txt";
 const supportedColours = [90, 91, 92, 93, 94, 95, 96, 97];
 runAsciiDisplay();
@@ -57,9 +55,20 @@ function callDisplayLoop(retInp)
 	setInterval(function()
 	{
 		chooseNextColour(colourValues);
-		consoleOutput.displayArt(retInp, colourValues.current);
+		displayAsciiArt(retInp, colourValues.current);
 		setPreviousColour(colourValues);
 	}, 1000);
+}
+
+
+// Displays ASCII art to console.
+function displayAsciiArt(artObj, colourValue)
+{
+	var setColour = "\x1b[" + colourValue + "m";
+	var preparedText = [setColour, artObj.asciiText, "\x1b[39m"].join("");
+	
+	console.clear();
+	console.log(preparedText);
 }
 
 
