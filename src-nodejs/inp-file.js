@@ -1,12 +1,4 @@
-/*
-	* Handles ASCII art input file.
-	* Max size is 100kb
-*/
-
 const fs = require("fs");
-const maxSize = 100000;
-const placeholderText = "ASCII art goes here.";
-
 
 
 // Check input file - Main.

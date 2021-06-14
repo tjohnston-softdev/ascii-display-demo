@@ -1,7 +1,9 @@
 // ASCII Display Demo - Node JS
 
-const inpFile = require("./src-nodejs/inp-file");
+const fs = require("fs");
 const inputFileName = "ascii.txt";
+const maxFileSize = 100000;
+const placeholderText = "ASCII art goes here.";
 const supportedColours = [90, 91, 92, 93, 94, 95, 96, 97];
 runAsciiDisplay();
 
@@ -9,39 +11,63 @@ runAsciiDisplay();
 // Main function.
 function runAsciiDisplay()
 {
-	var inputFileExists = inpFile.checkEntry(inputFileName);
-	var retrievedInput = callInputRetrieval(inputFileExists);
+	var inputFileSize = callInputRetrieval();
+	var retrievedContents = handleInputRead(inputFileSize);
 	
-	if (retrievedInput !== null)
+	if (retrievedContents.length > 0)
 	{
-		callDisplayLoop(retrievedInput);
+		callDisplayLoop(retrievedContents);
 	}
 }
 
 
 
 // Retrieves ASCII input.
-function callInputRetrieval(existObj)
+function callInputRetrieval()
 {
-	var retData = null;
+	var statObj = null;
+	var retrievedSize = -1;
 	
-	if (existObj.flag > 0)
+	try
 	{
-		// Read existing file.
-		retData = inpFile.readContents(inputFileName);
+		statObj = fs.statSync(inputFileName);
+		retrievedSize = statObj.size;
 	}
-	else if (existObj.flag === 0)
+	catch(e)
 	{
-		// Create placeholder.
-		retData = inpFile.createPlaceholder(inputFileName);
+		if (e.code === "ENOENT")
+		{
+			retrievedSize = -1;
+		}
+		else
+		{
+			throw e;
+		}
+	}
+	
+	return retrievedSize;
+}
+
+
+function handleInputRead(inpSize)
+{
+	var readRes = "";
+	
+	if (inpSize > 0 && inpSize <= maxFileSize)
+	{
+		readRes = fs.readFileSync(inputFileName, "utf8");
+	}
+	else if (inpSize > maxFileSize)
+	{
+		throw new Error("Input file cannot be larger than 100kb");
 	}
 	else
 	{
-		// Invalid file.
-		throw new Error(existObj.message);
+		fs.writeFileSync(inputFileName, placeholderText, "utf8");
+		readRes = placeholderText;
 	}
 	
-	return retData;
+	return readRes;
 }
 
 
@@ -62,10 +88,10 @@ function callDisplayLoop(retInp)
 
 
 // Displays ASCII art to console.
-function displayAsciiArt(artObj, colourValue)
+function displayAsciiArt(asciiText, colourValue)
 {
 	var setColour = "\x1b[" + colourValue + "m";
-	var preparedText = [setColour, artObj.asciiText, "\x1b[39m"].join("");
+	var preparedText = [setColour, asciiText, "\x1b[39m"].join("");
 	
 	console.clear();
 	console.log(preparedText);
