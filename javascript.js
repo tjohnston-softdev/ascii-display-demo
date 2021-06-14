@@ -30,18 +30,21 @@ function getInputSize()
 	
 	try
 	{
+		// Open file and read size.
 		statObj = fs.statSync(inputFileName);
 		retrievedSize = statObj.size;
 	}
-	catch(e)
+	catch(fileError)
 	{
-		if (e.code === "ENOENT")
+		if (fileError.code === "ENOENT")
 		{
+			// File does not exist. Return empty.
 			retrievedSize = -1;
 		}
 		else
 		{
-			throw e;
+			// Error retrieving size.
+			throw fileError;
 		}
 	}
 	
@@ -56,14 +59,17 @@ function handleInputRead(inpSize)
 	
 	if (inpSize > 0 && inpSize <= maxFileSize)
 	{
+		// Read input file.
 		readRes = fs.readFileSync(inputFileName, "utf8");
 	}
 	else if (inpSize > maxFileSize)
 	{
+		// File too large.
 		throw new Error("Input file cannot be larger than 100kb");
 	}
 	else
 	{
+		// Create input file.
 		fs.writeFileSync(inputFileName, placeholderText, "utf8");
 		readRes = placeholderText;
 	}
