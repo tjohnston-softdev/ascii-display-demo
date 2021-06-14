@@ -11,7 +11,7 @@ runAsciiDisplay();
 // Main function.
 function runAsciiDisplay()
 {
-	var inputFileSize = callInputRetrieval();
+	var inputFileSize = getInputSize();
 	var retrievedContents = handleInputRead(inputFileSize);
 	
 	if (retrievedContents.length > 0)
@@ -23,7 +23,7 @@ function runAsciiDisplay()
 
 
 // Retrieves ASCII input.
-function callInputRetrieval()
+function getInputSize()
 {
 	var statObj = null;
 	var retrievedSize = -1;
@@ -49,6 +49,7 @@ function callInputRetrieval()
 }
 
 
+// Reads input ASCII file.
 function handleInputRead(inpSize)
 {
 	var readRes = "";
@@ -138,3 +139,12 @@ function getRandomIndex()
 	var randRes = Math.floor(seedValue);
 	return randRes;
 }
+
+
+
+/*
+	REFERENCES:
+		(Title)								(URL)																					(Date Retrieved)
+		Colour Codes						https://en.wikipedia.org/wiki/ANSI_escape_code#3-bit_and_4-bit							2021-04-06
+		Display ASCII art to console.		https://blog.bitsrc.io/coloring-your-terminal-using-nodejs-eb647d4af2a2					2021-04-06
+*/
