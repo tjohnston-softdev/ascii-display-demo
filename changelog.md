@@ -1,3 +1,3 @@
 # Changelog
 
-Deleted 'src-nodejs' folder.
+Wrote ASCII display demo using Python

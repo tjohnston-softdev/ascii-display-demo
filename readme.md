@@ -10,6 +10,7 @@ As a quick experiment, I decided to recreate that old script using the programmi
 
 * To run the Windows batch script, execute `windows.bat`
 * To run the Node JS script, execute `javascript.js`
+* To run the Python script, execute `python.py`
 
 ---
 
@@ -19,12 +20,15 @@ As a quick experiment, I decided to recreate that old script using the programmi
 	* Script design.
 	* Windows Batch file implementation.
 	* Node JS implementation.
+	* Python implementation.
 * Pseudocode Flowchart
 	* Created using [Draw.IO](https://app.diagrams.net/)
 	* Symbols adapted from [Rice University Fortran 90 Manual](https://www.owlnet.rice.edu/~ceng303/manuals/fortran/FOR3_3.html)
 * Sample ASCII art from [ASCII Art Archive](https://www.asciiart.eu/computers/bug)
 * ANSI colour codes from [Wikipedia](https://en.wikipedia.org/wiki/ANSI_escape_code#3-bit_and_4-bit)
 * [Node JS text colouring tutorial](https://blog.bitsrc.io/coloring-your-terminal-using-nodejs-eb647d4af2a2) written by [@philipszdavido](https://github.com/philipszdavido)
+	* Also applicable to Python.
+* [Python clear terminal tutorial](https://www.tutorialspoint.com/how-to-clear-screen-in-python) written by [Pradeep Elance](https://www.tutorialspoint.com/answers/pradeep-elance) from [Tutorialspoint](https://www.tutorialspoint.com)
 
 ---
 
@@ -32,5 +36,3 @@ As a quick experiment, I decided to recreate that old script using the programmi
 This project is licensed as [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). You may use the contents for both personal and commercial purposes as long as credit is given, and any derived works are shared under the same license. This also includes any implementations of the design in different languages.
 
 ![CC BY-SA 4.0](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)
-
-
